@@ -20,4 +20,11 @@ public class FizzBuzzTest {
         assertThat(fizzBuzz1.print(),is("fizz"));
         assertThat(fizzBuzz2.print(),is("fizz"));
     }
+    @Test
+    public void should_print_buzz_when_num_is_divided_5(){
+        FizzBuzz fizzBuzz1 = new FizzBuzz(5);
+        FizzBuzz fizzBuzz2 = new FizzBuzz(50);
+        assertThat(fizzBuzz1.print(),is("buzz"));
+        assertThat(fizzBuzz2.print(),is("buzz"));
+    }
 }
