@@ -27,4 +27,9 @@ public class FizzBuzzTest {
         assertThat(fizzBuzzPrint(5), is("buzz"));
         assertThat(fizzBuzzPrint(50), is("buzz"));
     }
+    @Test
+    public void should_print_fizzbuzz_when_num_is_divided_3_and_5(){
+        assertThat(fizzBuzzPrint(15),is("fizzbuzz"));
+        assertThat(fizzBuzzPrint(45),is("fizzbuzz"));
+    }
 }
