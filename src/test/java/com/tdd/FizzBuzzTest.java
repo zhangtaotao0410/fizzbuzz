@@ -6,25 +6,25 @@ import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 public class FizzBuzzTest {
+    private String fizzBuzzPrint(int num) {
+        return new FizzBuzz(num).print();
+    }
+
     @Test
     public void should_print_num_when_input_is_normal_num() {
-        FizzBuzz fizzBuzz1 = new FizzBuzz(1);
-        FizzBuzz fizzBuzz2 = new FizzBuzz(2);
-        assertThat(fizzBuzz1.print(), is("1"));
-        assertThat(fizzBuzz2.print(), is("2"));
+        assertThat(fizzBuzzPrint(1), is("1"));
+        assertThat(fizzBuzzPrint(2), is("2"));
     }
+
     @Test
-    public void should_print_fizz_when_input_is_divided_3(){
-        FizzBuzz fizzBuzz1 = new FizzBuzz(3);
-        FizzBuzz fizzBuzz2 = new FizzBuzz(6);
-        assertThat(fizzBuzz1.print(),is("fizz"));
-        assertThat(fizzBuzz2.print(),is("fizz"));
+    public void should_print_fizz_when_input_is_divided_3() {
+        assertThat(fizzBuzzPrint(3), is("fizz"));
+        assertThat(fizzBuzzPrint(6), is("fizz"));
     }
+
     @Test
-    public void should_print_buzz_when_num_is_divided_5(){
-        FizzBuzz fizzBuzz1 = new FizzBuzz(5);
-        FizzBuzz fizzBuzz2 = new FizzBuzz(50);
-        assertThat(fizzBuzz1.print(),is("buzz"));
-        assertThat(fizzBuzz2.print(),is("buzz"));
+    public void should_print_buzz_when_num_is_divided_5() {
+        assertThat(fizzBuzzPrint(5), is("buzz"));
+        assertThat(fizzBuzzPrint(50), is("buzz"));
     }
 }

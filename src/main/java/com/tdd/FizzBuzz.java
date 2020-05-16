@@ -4,7 +4,6 @@ public class FizzBuzz {
     private int num;
 
     public FizzBuzz(int num) {
-
         this.num = num;
     }
 
